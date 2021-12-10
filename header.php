@@ -13,7 +13,7 @@
     </head>
     <body>
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <a class="navbar-brand" href="#">Selly</a>
+            <a class="navbar-brand" href="/">Selly</a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link <?php if($title === "Accueil") echo "active"; else echo "";?>" href="index.php">Accueil</a>
@@ -24,3 +24,4 @@
             </ul>
             <a class="nav-item navbar-link navbar-text" href="#">Mon compte</a>
         </nav>
+    

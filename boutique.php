@@ -1,4 +1,6 @@
 <?php
+// TODO: Afficher les articles disponibles dans la base de donnée.
+
 $title = "Boutique";
 include "header.php";
 ?>
