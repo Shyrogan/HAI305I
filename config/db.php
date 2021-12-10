@@ -1,9 +1,9 @@
 <?php
 
 define('HOST', 'localhost');
-define('DB_NAME', 'techsalesdb');
+define('DB_NAME', 'Selly_db');
 define('USER', 'root');
-define('PASS', '');
+define('PASS', 'root');
 define('PORT', 3306);
 
 try{
@@ -14,6 +14,6 @@ try{
     var_dump($e);
     echo $e->getMessage(); 
     echo $e->getCODE();
-    echo "45";
+    echo "1";
 }
 ?>
