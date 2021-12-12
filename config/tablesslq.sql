@@ -57,8 +57,8 @@ INSERT INTO Produits VALUES(1, "iphone 6", 'apple', "smatphones", "mieux que l\'
 INSERT INTO Produits VALUES(2, "iphone 7", 'apple', "smatphones", "mieux que l\'iphone 6", 865 ,"img/iphone7.jpg", 350 );
 
 INSERT INTO Produits VALUES(3, "Microsoft Surface Pro 5", 'Microsoft', "portables", "mieux que le Surface 4", 565 ,"img/MicrosoftSurface5.jpg", 65 );
-INSERT INTO Produits VALUES(4, "Microsoft Surface Pro 6", 'Microsoft', "portables", "mieux que le Surface 5", 765 ,"img/MicrosoftSurface5.jpg", 165 );
-INSERT INTO Produits VALUES(5, "Microsoft Surface Pro 7", 'Microsoft', "portables", "mieux que le Surface 6", 935 ,"img/MicrosoftSurface5.jpg", 420 );
+INSERT INTO Produits VALUES(4, "Microsoft Surface Pro 6", 'Microsoft', "portables", "mieux que le Surface 5", 765 ,"img/MicrosoftSurface6.jpg", 165 );
+INSERT INTO Produits VALUES(5, "Microsoft Surface Pro 7", 'Microsoft', "portables", "mieux que le Surface 6", 935 ,"img/MicrosoftSurface7.jpg", 420 );
 
 INSERT INTO Produits VALUES(6, "Asus Zenbook 13", 'Asus', "portables", "Le plus zen des pc", 480 ,"img/AsusZenbook13.jpg", 220 );
 INSERT INTO Produits VALUES(7, "Asus Rog Phone 5", 'Asus', "smatphones", "et oui Asus fait des téléphones", 565 ,"img/AsusRogPhone5.jpg", 667 );
