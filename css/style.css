@@ -54,3 +54,7 @@ p {
 body {
     background-color: black !important;
 }
+
+.listeproduit td img{
+	max-width : 180px;
+}
