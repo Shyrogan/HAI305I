@@ -1,9 +1,7 @@
 <?php
 
-session_start();
-include "DB.php";
-global $db;
 
+<<<<<<< HEAD
 $rproduit = "SELECT * FROM produits ";
 $rcommandes ="SELECT * FROM commandes ";
 $rclients = "SELECT * FROM clients ";
@@ -13,3 +11,49 @@ $produits = $db->query($rproduit);
 $commandes = $db->query($rcommandes);
 $clients = $db->query($rclients);
 $lignescommandes = $db->query($rlignescommandes);
+=======
+
+
+
+
+function getProduits($marq){
+	global $db;
+	$query = "SELECT * FROM produits ";
+	$where = "";
+	if ($marq != "") {
+		$where .= " WHERE marque = '".$marq."'";
+	}
+	$query .= $where;
+	$produit = $db->query($query);
+	return $produit;
+}
+
+function getMarques(){
+	global $db;
+	$query = "SELECT marque FROM produits GROUP BY marque";
+	return $db->query($query);
+}
+
+function getCommandes(){
+	global $db;
+	$rcommandes ="SELECT * FROM commandes ";
+	return $db->query($rcommandes);
+}
+
+function getClients(){
+	global $db;
+	$rclients = "SELECT * FROM clients ";
+	return $db->query($rclients);
+}
+
+function getLignesCommandes(){
+	global $db;
+	$rlignescommandes = "SELECT * FROM lignescommandes ";
+	return $db->query($rlignescommandes);
+}
+
+
+
+
+
+>>>>>>> 1e05b39faffab6ccc9ae7e2c7bad363cf0776f28

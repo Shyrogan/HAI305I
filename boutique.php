@@ -1,8 +1,10 @@
 <?php
 $title = "Boutique";
 $pagecour = "Liste_Produits";
+
+
 include "header.php";
-include "config/requete.php";
+$marq = isset($_GET["marque"]) ?  $_GET["marque"] : "";
 
 echo '<div class="page-container container">';
 while ($Lproduits = $produits->fetch()) {
