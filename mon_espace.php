@@ -16,7 +16,7 @@ $_SESSION['age'] = $_SESSION['age'];
 $_SESSION['email'] = $_SESSION['email'];
 }
 
-$pagecour = "Mon Espace";
+$title = "Mon Espace";
 ?>
 
 

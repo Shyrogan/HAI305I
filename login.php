@@ -1,7 +1,8 @@
 <?php
 session_start();
 
-$pagecour = "login";
+$title = "Connexion";
+
 include "header.php";
 ?>
 

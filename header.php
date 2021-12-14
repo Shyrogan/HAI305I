@@ -1,7 +1,7 @@
 <?php
 include "config/db.php";
 include "config/requete.php";
-$title = isset($pagecour) ? $pagecour : "";
+$title = isset($title) ? $title : "";
 $son =  isset($_SESSION['pseudo']) ? "mon_espace.php" : "login.php";
 ?>
 

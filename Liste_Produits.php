@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-$pagecour = "Liste_Produits";
+$title = "Liste_Produits";
 
 $nomvisi = isset($_SESSION["pseudo"]) ? $_SESSION["pseudo"] : "bel inconnu(e)";
 include "header.php";
