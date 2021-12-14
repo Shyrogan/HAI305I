@@ -6,8 +6,8 @@ $nomvisi = isset($_SESSION["pseudo"]) ? $_SESSION["pseudo"] : "bel inconnu(e)";
 include "header.php";
 ?>
 
-<div class="title-container container h-100">
-    <div class="row align-items-center h-100">
+<div class="title-container container h-10">
+    <div class="row align-items-center h-10">
         <div class="col-6 mx-auto">
             <h1 class="text-center text-white">Selly</h1>
             <footer class="blockquote-footer text-center"><cite title="Jaff Bezos">Jaff Bezos:</cite> Le meilleur site de vente depuis bien 2 décennies</footer>

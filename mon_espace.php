@@ -17,27 +17,19 @@ $_SESSION['email'] = $_SESSION['email'];
 }
 
 $pagecour = "Mon Espace";
-
-
-include "myheader.php";
-
 ?>
 
 
+<div class="page-container container">
+    <p>Salut <?php echo $_SESSION['pseudo']; ?> !<br /> Bienvenue sur ton Espace</p>
 
-    <p>
-        Salut <?php echo $_SESSION['pseudo']; ?> !<br />
-        Bienvenue sur ton Espace 
-    </p>
+    <h2>Mes informations:</h2>
+    <ul>
+        <p><li>Pseudo: <?php echo $_SESSION['pseudo']; ?></li></p>               
+        <p><li>Age: <?php echo $_SESSION['age']; ?>ans </li></p>
+        <p><li>Mail: <?php echo $_SESSION['email']; ?></li></p>
+    </ul>
 
-<h2>Mes informations:</h2>
-<ul>
-                                    <p><li>Pseudo: <?php echo $_SESSION['pseudo']; ?></li></p>               
-                                    <p><li>Age: <?php echo $_SESSION['age']; ?>ans </li></p>
-                                    <p><li>Mail: <?php echo $_SESSION['email']; ?></li></p>
-                                      </ul>
-    
-
-
-<p><a href="deconexion.php">Déconnexion</a></p>
+    <p><a href="deconnexion.php">Déconnexion</a></p>
     <?php include "footer.php" ?>
+</div>

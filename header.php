@@ -1,8 +1,6 @@
 <?php
-include "db.php";
 $title = isset($pagecour) ? $pagecour : "";
 $son =  isset($_SESSION['pseudo']) ? "mon_espace.php" : "login.php";
-
 ?>
 
 <!DOCTYPE html>

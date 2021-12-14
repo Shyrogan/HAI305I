@@ -41,10 +41,6 @@ CREATE TABLE Lignescommandes
 	idProduit VARCHAR(30) REFERENCES Produits(idProduit),
 	quantite INT NOT NULL,
 	montant INT NOT NULL
-
-
-
-
 );
 
 
