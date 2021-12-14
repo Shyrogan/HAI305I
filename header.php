@@ -1,10 +1,6 @@
 <?php
-<<<<<<< HEAD
-=======
-global $db;
 include "config/db.php";
 include "config/requete.php";
->>>>>>> 1e05b39faffab6ccc9ae7e2c7bad363cf0776f28
 $title = isset($pagecour) ? $pagecour : "";
 $son =  isset($_SESSION['pseudo']) ? "mon_espace.php" : "login.php";
 ?>

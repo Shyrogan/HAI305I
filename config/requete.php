@@ -1,7 +1,4 @@
 <?php
-
-
-<<<<<<< HEAD
 $rproduit = "SELECT * FROM produits ";
 $rcommandes ="SELECT * FROM commandes ";
 $rclients = "SELECT * FROM clients ";
@@ -11,8 +8,6 @@ $produits = $db->query($rproduit);
 $commandes = $db->query($rcommandes);
 $clients = $db->query($rclients);
 $lignescommandes = $db->query($rlignescommandes);
-=======
-
 
 
 
@@ -51,9 +46,3 @@ function getLignesCommandes(){
 	$rlignescommandes = "SELECT * FROM lignescommandes ";
 	return $db->query($rlignescommandes);
 }
-
-
-
-
-
->>>>>>> 1e05b39faffab6ccc9ae7e2c7bad363cf0776f28

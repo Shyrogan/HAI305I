@@ -14,6 +14,7 @@ while ($Lproduits = $produits->fetch()) {
     echo '</div>';
     echo '<div class="col-6">';
       echo '<p>'.$Lproduits['nom'].'</p>';
+      echo '<p>'.$Lproduits['descriptif'].'</p>';
     echo '</div>';
     echo '<div class="col">';
       echo '<p>'.$Lproduits['prix'].'€</p>';
