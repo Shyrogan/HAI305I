@@ -5,8 +5,9 @@ include "header.php";
 $marq = isset($_GET["marque"]) ?  $_GET["marque"] : "";
 
 echo '<div class="page-container container">';
+  echo '<p class="p-4"><label for="nom">Recherche :</label><input type="text" value="" id="nom" name="nom" /></p>';
 while ($Lproduits = $produits->fetch()) {
-  echo '<div class="row">';
+  echo '<div class="row" id="'.$Lproduits['nom'].'">';
     echo '<div class="col">';
       echo '<img src="'.$Lproduits['photo'].'" class="imgproduits">';
     echo '</div>';
@@ -21,5 +22,20 @@ while ($Lproduits = $produits->fetch()) {
 }
 echo '</div>';
 ?>
+
+<script>
+  $("#nom").on('input', function(e) {
+    const nom = $( this ).val().toLocaleLowerCase();
+
+    $(".row").each(function(e) {
+      const row = $( this );
+      if(!row.attr('id').toLocaleLowerCase().includes(nom)) {
+        row.hide(200)
+      } else {
+        row.show(200)
+      }
+    })
+  });
+</script>
 
 <?php include "footer.php" ?>
