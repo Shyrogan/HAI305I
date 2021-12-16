@@ -12,6 +12,7 @@ if (!isset($_SESSION["mail"]) || $_SESSION["mail"] == ""){
         -> fetch();
     $idCommande = $resultatCommande['idCommande'];
 
+    $total = 0;
     echo '<div class="page-container container">';
     echo '<p class="p-4"><label class="pr-4">Recherche : </label><input type="text" value="" id="nom" name="nom" /></p>';
     $lignes = $db->query("SELECT * FROM LignesCommandes WHERE idCommande = ".$idCommande);
@@ -29,10 +30,12 @@ if (!isset($_SESSION["mail"]) || $_SESSION["mail"] == ""){
         echo '<p>Prix: '.$Lproduits['prix'] * $Lcommande['quantite'].'€</p>';
         echo '</div>';
         echo '</div>';
+        $total += $Lproduits['prix'] * $Lcommande['quantite'];
     }
-    echo '<p class="py-4">';
-    echo '<button onclick="location.href=`/valider.php`" type="button">Valider</button>';
-    echo '</p>';
+    echo '<div class="py-4">';
+    echo '<p>Total: '.$total.'€</p>';
+    echo '<button onclick="location.href=`/valider_panier.php`" type="button">Valider</button>';
+    echo '</div>';
     echo '</div>';
 }
 ?>
