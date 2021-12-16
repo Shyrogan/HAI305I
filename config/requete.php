@@ -9,16 +9,9 @@ $clients = $db->query($rclients);
 
 */
 
-function getProduits($marq){
+function getProduits(){
 	global $db;
-	$query = "SELECT * FROM produits ";
-	$where = "";
-	if ($marq != "") {
-		$where .= " WHERE marque = '".$marq."'";
-	}
-	$query .= $where;
-	$produit = $db->query($query);
-	return $produit;
+	return $db->query("SELECT * FROM produits");
 }
 
 function getMarques(){
@@ -29,7 +22,7 @@ function getMarques(){
 
 function getCommandes(){
 	global $db;
-	$rcommandes ="SELECT * FROM commandes ";
+	$rcommandes ="SELECT * FROM Commandes WHERE idCommande = ?";
 	return $db->query($rcommandes);
 }
 

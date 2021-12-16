@@ -1,11 +1,9 @@
 <?php
 session_start();
 include "header.php";
-$pagecour = "Mon Espace";
+$titre = "Mon Espace";
 
-
-
-if (!isset($_SESSION["mail"]) || $_SESSION["mail"] ==""){
+if (!isset($_SESSION["mail"]) || $_SESSION["mail"] == ""){
 	header('Location: index.php');
 	exit();
 }
@@ -23,26 +21,29 @@ if ($client != null){
 			$ville = "" ?  "non renseigné" : $ville ;
 }
 else {
-	echo " un probleme est survenu dans la base";
+	echo "Un probleme est survenu dans la base";
 }
 
 ?>
 
 
 <div class="page-container container">
-    <p>Salut <?php echo $prenom; ?> !<br /> Bienvenue sur ton Espace</p>
+    <p class="py-4">Salut <?php echo $prenom; ?> !<br /> Bienvenue sur ton Espace</p>
 
     <h2>Mes informations:</h2>
     <ul>
-    	<p><li>Nom: <?php echo $nom; ?></li></p> 
-        <p><li>Prenom: <?php echo $prenom; ?></li></p>               
-        <p><li>Adresse éléctronique: <?php echo $_SESSION['mail']; ?></li></p>
-        <p><li>Telephone: <?php echo $tel; ?></li></p> 
-        <p><li>Adresse: <?php echo $adresse; ?></li></p> 
-        <p><li>Ville: <?php echo $ville; ?></li></p> 
+    	<li><p>Nom: <?php echo $nom; ?></p></li>
+        <li><p>Prenom: <?php echo $prenom; ?></p></li>              
+        <li><p>Adresse éléctronique: <?php echo $_SESSION['mail']; ?></li></p>
+        <li><p>Telephone: <?php echo $tel; ?></p></li>
+        <li><p>Adresse: <?php echo $adresse; ?></p></li>
+        <li><p>Ville: <?php echo $ville; ?></p></li>
 
     </ul>
 
-    <p><a href="deconnexion.php">Déconnexion</a></p>
+    <p class="py-4">
+		<button onclick="location.href='/panier.php'" type="button">Mon panier</button>
+		<button onclick="location.href='/deconnexion.php'" type="button">Déconnexion</button>
+	</p>
     <?php include "footer.php" ?>
 </div>
