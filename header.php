@@ -1,8 +1,10 @@
 <?php
 include "config/db.php";
 include "config/requete.php";
+
 $title = isset($title) ? $title : "";
-$son =  isset($_SESSION['pseudo']) ? "mon_espace.php" : "login.php";
+$son =  isset($_SESSION['email']) ? "mon_espace.php" : "login.php";
+$connexionInscription = isset($_SESSION['email']) ? "Inscription" : "Connexion";
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +23,7 @@ $son =  isset($_SESSION['pseudo']) ? "mon_espace.php" : "login.php";
     </head>
     <body>
         <nav id="nav" class="navbar navbar-expand-lg navbar-dark fixed-top">
-            <a class="navbar-brand" href="#">Selly</a>
+            <a class="navbar-brand" href="/">Selly</a>
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link <?php if($title === "Accueil") echo "active"; else echo "";?>" href="index.php">Accueil</a>
@@ -30,5 +32,9 @@ $son =  isset($_SESSION['pseudo']) ? "mon_espace.php" : "login.php";
                     <a class="nav-link  <?php if($title === "Boutique") echo "active"; else echo "";?>" href="boutique.php">Boutique</a>
                 </li>
             </ul>
-            <a class="nav-item navbar-link navbar-text" href="<?php echo $son ; ?> ">Mon compte</a>
+            <a class="nav-item navbar-link navbar-text" href="<?php echo $son ; ?> "><?php echo $connexionInscription?></a>
         </nav>
+
+<script>
+
+</script>
