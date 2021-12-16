@@ -40,15 +40,15 @@ CREATE TABLE LignesCommandes
 );
 
 
-INSERT INTO Produits VALUES(1, "iPhone 6", 'Apple', "Smartphone", "Mieux que l\'iPhone 5", 665 ,"img/iphone6.jpg", 250 );
-INSERT INTO Produits VALUES(2, "iPhone 7", 'Apple', "Smartphone", "Mieux que l\'iPhone 6", 865 ,"img/iphone7.jpg", 350 );
+INSERT INTO Produits VALUES("iPhone 6", 'Apple', "Smartphone", "Mieux que l\'iPhone 5", 665 ,"img/iphone6.jpg", 250 );
+INSERT INTO Produits VALUES("iPhone 7", 'Apple', "Smartphone", "Mieux que l\'iPhone 6", 865 ,"img/iphone7.jpg", 350 );
 
-INSERT INTO Produits VALUES(3, "Microsoft Surface Pro 5", 'Microsoft', "Portable", "mieux que le Surface 4", 565 ,"img/MicrosoftSurface5.jpg", 65 );
-INSERT INTO Produits VALUES(4, "Microsoft Surface Pro 6", 'Microsoft', "Portable", "mieux que le Surface 5", 765 ,"img/MicrosoftSurface6.jpg", 165 );
-INSERT INTO Produits VALUES(5, "Microsoft Surface Pro 7", 'Microsoft', "Portable", "mieux que le Surface 6", 935 ,"img/MicrosoftSurface7.jpg", 420 );
+INSERT INTO Produits VALUES("Microsoft Surface Pro 5", 'Microsoft', "Portable", "mieux que le Surface 4", 565 ,"img/MicrosoftSurface5.jpg", 65 );
+INSERT INTO Produits VALUES("Microsoft Surface Pro 6", 'Microsoft', "Portable", "mieux que le Surface 5", 765 ,"img/MicrosoftSurface6.jpg", 165 );
+INSERT INTO Produits VALUES("Microsoft Surface Pro 7", 'Microsoft', "Portable", "mieux que le Surface 6", 935 ,"img/MicrosoftSurface7.jpg", 420 );
 
-INSERT INTO Produits VALUES(6, "Asus Zenbook 13", 'Asus', "Portable", "Le plus zen des pc", 480 ,"img/AsusZenbook13.jpg", 220 );
-INSERT INTO Produits VALUES(7, "Asus Rog Phone 5", 'Asus', "Smartphone", "Et oui Asus font des téléphones...", 565 ,"img/AsusRogPhone5.jpg", 667 );
-INSERT INTO Produits VALUES(8, "HP Elite x3", 'HP', "Smartphone", "Et oui HP font des téléphones...", 499 ,"img/HpElitex3.jpg", 490 );
-INSERT INTO Produits VALUES(9, "HP Spectre x360", 'HP', "Portable", "Térifiant..", 840 ,"img/HpSpectrex360.jpg", 69 );
+INSERT INTO Produits VALUES("Asus Zenbook 13", 'Asus', "Portable", "Le plus zen des pc", 480 ,"img/AsusZenbook13.jpg", 220 );
+INSERT INTO Produits VALUES("Asus Rog Phone 5", 'Asus', "Smartphone", "Et oui Asus font des téléphones...", 565 ,"img/AsusRogPhone5.jpg", 667 );
+INSERT INTO Produits VALUES("HP Elite x3", 'HP', "Smartphone", "Et oui HP font des téléphones...", 499 ,"img/HpElitex3.jpg", 490 );
+INSERT INTO Produits VALUES("HP Spectre x360", 'HP', "Portable", "Térifiant..", 840 ,"img/HpSpectrex360.jpg", 69 );
 
