@@ -1,15 +1,13 @@
 <?php
-$rproduit = "SELECT * FROM produits ";
+/*$rproduit = "SELECT * FROM produits ";
 $rcommandes ="SELECT * FROM commandes ";
 $rclients = "SELECT * FROM clients ";
-$rlignescommandes = "SELECT * FROM lignescommandes ";
 
 $produits = $db->query($rproduit);
 $commandes = $db->query($rcommandes);
 $clients = $db->query($rclients);
-$lignescommandes = $db->query($rlignescommandes);
 
-
+*/
 
 function getProduits($marq){
 	global $db;
@@ -46,3 +44,34 @@ function getLignesCommandes(){
 	$rlignescommandes = "SELECT * FROM lignescommandes ";
 	return $db->query($rlignescommandes);
 }
+
+function checkmail($mail){
+		global $db;
+	$query = "SELECT email FROM clients ";
+	$where = "";
+	if ($mail != "") {
+		$where .= " WHERE email = '".$mail."'";
+	}else
+	{
+		return false;
+	}
+	$query .= $where;
+	$client = $db->query($query)->fetch();
+	return $client["email"] == $mail;
+}
+
+function checkmdp($mdp, $mail){
+	global $db;
+	$sql = "SELECT motDePasse FROM clients ";
+	$where = " WHERE motDePasse = '".$mdp."' AND email = '".$mail."'";
+	$sql .= $where;
+	$password = $db->query($sql)->fetch();
+	return $password["motDePasse"] == $mdp;
+}
+
+function getClient($mail){
+	global $db;
+	$q = "SELECT * FROM clients WHERE email = '".$mail."' ";
+	return $db->query($q);
+}
+	

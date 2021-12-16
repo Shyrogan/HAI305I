@@ -1,7 +1,6 @@
 <?php
 session_start();
 $title = "Accueil";
-$pagecour = "Selly";
 $nomvisi = isset($_SESSION["pseudo"]) ? $_SESSION["pseudo"] : "bel inconnu(e)";
 include "header.php";
 ?>
