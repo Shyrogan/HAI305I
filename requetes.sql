@@ -52,3 +52,4 @@ INSERT INTO Produits VALUES("Asus Rog Phone 5", 'Asus', "Smartphone", "Et oui As
 INSERT INTO Produits VALUES("HP Elite x3", 'HP', "Smartphone", "Et oui HP font des téléphones...", 499 ,"img/HpElitex3.jpg", 490 );
 INSERT INTO Produits VALUES("HP Spectre x360", 'HP', "Portable", "Térifiant..", 840 ,"img/HpSpectrex360.jpg", 69 );
 
+   
