@@ -51,3 +51,4 @@ INSERT INTO Produits(nom, marque, categorie, descriptif, prix, photo, stock) VAL
 INSERT INTO Produits(nom, marque, categorie, descriptif, prix, photo, stock) VALUES("HP Elite x3", 'HP', "Smartphone", "Et oui HP font des téléphones...", 499 ,"img/HpElitex3.jpg", 490 );
 INSERT INTO Produits(nom, marque, categorie, descriptif, prix, photo, stock) VALUES("HP Spectre x360", 'HP', "Portable", "Térifiant..", 840 ,"img/HpSpectrex360.jpg", 69 );
 
+   
