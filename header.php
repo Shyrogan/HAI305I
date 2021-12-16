@@ -3,8 +3,9 @@ include "config/db.php";
 include "config/requete.php";
 
 $title = isset($title) ? $title : "";
-$son =  isset($_SESSION['email']) ? "mon_espace.php" : "login.php";
-$connexionInscription = isset($_SESSION['email']) ? "Inscription" : "Connexion";
+if(isset($_SESSION['mail'])) echo "Debug : Session = ".$_SESSION['mail'];
+$son =  isset($_SESSION['mail']) && $_SESSION['mail'] != "" ? "mon_espace.php" : "";
+//$connexionInscription = checkmail($_SESSION['email']) ? "login" : "Inscription";
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +33,13 @@ $connexionInscription = isset($_SESSION['email']) ? "Inscription" : "Connexion";
                     <a class="nav-link  <?php if($title === "Boutique") echo "active"; else echo "";?>" href="boutique.php">Boutique</a>
                 </li>
             </ul>
-            <a class="nav-item navbar-link navbar-text" href="<?php echo $son ; ?> "><?php echo $connexionInscription?></a>
+			<?php if ($son != "") 
+				echo "<a class='nav-item navbar-link navbar-text' href='mon_espace.php'>Mon Espace</a>";
+			else {
+				echo "<a class='nav-item navbar-link navbar-text' href='login.php'>Connexion</a>";
+				echo "&nbsp;<a class='nav-item navbar-link navbar-text' href='inscription.php'>Inscription</a>";
+			}
+			?>
         </nav>
 
 <script>

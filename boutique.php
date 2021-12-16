@@ -3,6 +3,7 @@ $title = "Boutique";
 
 include "header.php";
 $marq = isset($_GET["marque"]) ?  $_GET["marque"] : "";
+$produits = getProduits($marq);
 
 echo '<div class="page-container container">';
   echo '<p class="p-4"><label class="pr-4">Recherche : </label><input type="text" value="" id="nom" name="nom" /></p>';

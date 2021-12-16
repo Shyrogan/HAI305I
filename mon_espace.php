@@ -1,33 +1,46 @@
 <?php
 session_start();
 include "header.php";
-if  (isset($_GET[ 'nom' ]))
-{
+$pagecour = "Mon Espace";
 
 
-$_SESSION['pseudo'] = isset($_GET [ 'nom' ]) ? $_GET [ 'nom' ] : "" ;
-$_SESSION['age'] = isset($_GET [ 'age' ]) ? $_GET [ 'age' ] : "" ;
-$_SESSION['email'] = isset($_GET [ 'mail' ]) ? $_GET [ 'mail' ] : "" ;
+
+if (!isset($_SESSION["mail"]) || $_SESSION["mail"] ==""){
+	header('Location: index.php');
+	exit();
 }
-else
-{
-$_SESSION['pseudo'] = $_SESSION['pseudo'];
-$_SESSION['age'] = $_SESSION['age'];
-$_SESSION['email'] = $_SESSION['email'];
+$getClient = getClient($_SESSION["mail"]);
+$client = $getClient->fetch();
+if ($client != null){
+			$nom = $client['nom'];
+			$prenom = $client['prenom'];
+			$ville = $client['ville'];
+			$adresse =$client['adresse'];
+			$tel = $client['telephone'];
+			
+			$tel = "" ?  "non renseigné" : $tel ;
+			$adresse = "" ?  "non renseigné" : $adresse ;
+			$ville = "" ?  "non renseigné" : $ville ;
+}
+else {
+	echo " un probleme est survenu dans la base";
 }
 
-$title = "Mon Espace";
 ?>
 
 
 <div class="page-container container">
-    <p>Salut <?php echo $_SESSION['pseudo']; ?> !<br /> Bienvenue sur ton Espace</p>
+    <p>Salut <?php echo $prenom; ?> !<br /> Bienvenue sur ton Espace</p>
 
     <h2>Mes informations:</h2>
     <ul>
-        <p><li>Pseudo: <?php echo $_SESSION['pseudo']; ?></li></p>               
-        <p><li>Age: <?php echo $_SESSION['age']; ?>ans </li></p>
-        <p><li>Mail: <?php echo $_SESSION['email']; ?></li></p>
+    	<p><li>Nom: <?php echo $nom; ?></li></p> 
+        <p><li>Prenom: <?php echo $prenom; ?></li></p>               
+        <p><li>Adresse éléctronique: <?php echo $_SESSION['mail']; ?></li></p>
+        <p><li>Telephone: <?php echo $tel; ?></li></p> 
+        <p><li>Adresse: <?php echo $adresse; ?></li></p> 
+        <p><li>Ville: <?php echo $ville; ?></li></p> 
+
     </ul>
 
     <p><a href="deconnexion.php">Déconnexion</a></p>
