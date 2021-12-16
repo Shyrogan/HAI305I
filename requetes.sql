@@ -24,13 +24,13 @@ CREATE TABLE Produits
 
 CREATE TABLE Commandes
 (
-	idCommande VARCHAR(20) PRIMARY KEY AUTO_INCREMENT,
+	idCommande INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	dateCommande DATE NOT NULL,
 	emailclient VARCHAR(30) REFERENCES Clients(email),
 	etat VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE Lignescommandes
+CREATE TABLE LignesCommandes
 (
 	idLigneCommande INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	idCommande INT NOT NULL REFERENCES Commandes(idCommande),
@@ -51,6 +51,4 @@ INSERT INTO Produits VALUES(6, "Asus Zenbook 13", 'Asus', "Portable", "Le plus z
 INSERT INTO Produits VALUES(7, "Asus Rog Phone 5", 'Asus', "Smartphone", "Et oui Asus font des téléphones...", 565 ,"img/AsusRogPhone5.jpg", 667 );
 INSERT INTO Produits VALUES(8, "HP Elite x3", 'HP', "Smartphone", "Et oui HP font des téléphones...", 499 ,"img/HpElitex3.jpg", 490 );
 INSERT INTO Produits VALUES(9, "HP Spectre x360", 'HP', "Portable", "Térifiant..", 840 ,"img/HpSpectrex360.jpg", 69 );
-
-
 
