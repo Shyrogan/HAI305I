@@ -3,7 +3,7 @@
 define('HOST', 'localhost');
 define('DB_NAME', 'Selly_db');
 define('USER', 'root');
-define('PASS', '');
+define('PASS', 'root');
 define('PORT', 3306);
 
 

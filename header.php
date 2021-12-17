@@ -33,8 +33,10 @@ $son =  isset($_SESSION['mail']) && $_SESSION['mail'] != "" ? "mon_espace.php" :
                     <a class="nav-link  <?php if($title === "Boutique") echo "active"; else echo "";?>" href="boutique.php">Boutique</a>
                 </li>
             </ul>
-			<?php if ($son != "") 
+			<?php if ($son != "") {
 				echo "<a class='nav-item navbar-link navbar-text' href='mon_espace.php'>Mon Espace</a>";
+                echo "&nbsp;<a class='nav-item navbar-link navbar-text' href='panier.php'>Mon panier</a>";
+            }
 			else {
 				echo "<a class='nav-item navbar-link navbar-text' href='login.php'>Connexion</a>";
 				echo "&nbsp;<a class='nav-item navbar-link navbar-text' href='inscription.php'>Inscription</a>";
