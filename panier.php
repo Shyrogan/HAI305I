@@ -1,4 +1,5 @@
 <?php
+$title = "Panier";
 session_start();
 include "header.php";
 

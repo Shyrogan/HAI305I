@@ -1,4 +1,5 @@
 <?php
+$title = "Validation du panier";
 session_start();
 include "header.php";
 
