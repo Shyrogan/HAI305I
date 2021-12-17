@@ -10,6 +10,9 @@ if (!isset($_SESSION["mail"]) || $_SESSION["mail"] == ""){
 $getClient = getClient($_SESSION["mail"]);
 $client = $getClient->fetch();
 if ($client != null){
+
+			$email = $_SESSION['mail'];
+
 			$nom = $client['nom'];
 			$prenom = $client['prenom'];
 			$ville = $client['ville'];
@@ -40,6 +43,12 @@ else {
         <li><p>Ville: <?php echo $ville; ?></p></li>
 
     </ul>
+
+	<h2>Mes commandes:</h2>
+	<?php
+	$resultatCommande = $db -> query("SELECT (idCommande) FROM Commandes WHERE emailclient = '".$email."");
+	echo "1";
+?>
 
     <p class="py-4">
 		<button onclick="location.href='/panier.php'" type="button">Mon panier</button>
