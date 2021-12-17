@@ -25,6 +25,8 @@ if ($client != null){
 }
 else {
 	echo "Un probleme est survenu dans la base";
+	header('Location: deconnexion.php');
+	exit();
 }
 
 ?>
@@ -44,7 +46,21 @@ else {
 
     </ul>
 
+<<<<<<< HEAD
 	<p class="py-4">
+=======
+<<<<<<< HEAD
+	
+	
+
+
+=======
+	<h2>Mes commandes:</h2>
+	
+>>>>>>> 19faa614876c694911c165c0f4a72edf1896e5f8
+    <p class="py-4">
+		<button onclick="location.href='/panier.php'" type="button">Mon panier</button>
+>>>>>>> fcee86715ec9e245aa14604caa0bb755965e563b
 		<button onclick="location.href='/deconnexion.php'" type="button">Déconnexion</button>
 	</p>
 
