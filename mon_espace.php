@@ -69,7 +69,7 @@ else {
 			echo '</div>';
 			echo '<div class="col">';
 			echo '<p>Prix unitaire: '.$produit['prix'].'€</p>';
-			echo '<p>Quantité: '.$ligne['quantite'].'</p>';
+			echo '<p>Quantité: '.$ligne['quantite'].'€</p>';
 			echo '<p>Total: '.$produit['prix']*$ligne['quantite'].'€</p>';
 			echo '</div>';
 			echo '</div>';
