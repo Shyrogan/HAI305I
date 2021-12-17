@@ -42,7 +42,7 @@ if( $nom !="" && $prenom !="" && $mail!="" && $mdp !=""){
 
 
 <div class="page-container container p-4">
-	<div id="error" class="error"><?php echo $error ?></div>
+	<div id="error" class="error"><p><?php echo $error ?></p></div>
 	
 	<form id="envoyer" name="log" method="Post">
 		<p><label for="nom">Nom* :</label><input type="text" value="<?php echo $nom ?>" id="nom" name="nom" /></p>
