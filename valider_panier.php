@@ -22,7 +22,9 @@ if (!isset($_SESSION["mail"]) || $_SESSION["mail"] == ""){
 		header('Location: mon_espace.php');
 		exit();
     } else {
-        echo '<div class="page-container container">Vide</div>';
+        echo '<div class="page-container container"><p>Le panier est vide</p></div>';
+        header("refresh:2;url=mon_espace.php");
+		exit();
     }
 }
 ?>
