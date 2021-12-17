@@ -19,7 +19,11 @@ while ($Lproduits = $produits->fetch()) {
   echo '</div>';
   echo '<div class="col">';
   echo '<p>'.$Lproduits['prix'].'€</p>';
-  echo '<button onclick="location.href=`/ajouter_panier.php?idProduit='.$Lproduits['idProduit'].'`" type="button">Ajouter au panier</button>';
+  if(isset($_SESSION['mail'])) {
+    echo '<button onclick="location.href=`/ajouter_panier.php?idProduit='.$Lproduits['idProduit'].'`" type="button">Ajouter au panier</button>';
+  } else {
+    echo '<p>Connectez-vous/inscrivez-vous pour ajouter au panier.</p>';
+  }
   echo '</div>';
   echo '</div>';
 }
