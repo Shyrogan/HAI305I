@@ -19,6 +19,7 @@ while ($Lproduits = $produits->fetch()) {
   echo '</div>';
   echo '<div class="col">';
   echo '<p>'.$Lproduits['prix'].'€</p>';
+  echo '<button onclick="location.href=`/ajouter_panier.php?idProduit='.$Lproduits['idProduit'].'`" type="button">Ajouter au panier</button>';
   echo '</div>';
   echo '</div>';
 }
