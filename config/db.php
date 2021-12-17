@@ -1,7 +1,7 @@
 <?php
 
 define('HOST', 'localhost');
-define('DB_NAME', 'Selly_db');
+define('DB_NAME', 'db_selly');
 define('USER', 'root');
 define('PASS', 'root');
 define('PORT', 3306);

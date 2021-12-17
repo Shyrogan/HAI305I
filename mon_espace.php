@@ -25,6 +25,8 @@ if ($client != null){
 }
 else {
 	echo "Un probleme est survenu dans la base";
+	header('Location: deconnexion.php');
+	exit();
 }
 
 ?>
@@ -44,11 +46,9 @@ else {
 
     </ul>
 
-	<h2>Mes commandes:</h2>
-	<?php
-	$resultatCommande = $db -> query("SELECT (idCommande) FROM Commandes WHERE emailclient = '".$email."");
-	echo "1";
-?>
+	
+	
+
 
     <p class="py-4">
 		<button onclick="location.href='/panier.php'" type="button">Mon panier</button>

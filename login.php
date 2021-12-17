@@ -31,7 +31,7 @@ if($mail != "" && $mdp != "" && !isset($_SESSION['mail'])){
 
 
 <div class="page-container container p-4">
-	<div id="error" class="error"><p>?php echo $error ?></p></div>
+	<div id="error" class="error"><p><?php echo $error ?></p></div>
 	
 	<form id="envoyer" name="log" action="login.php" method="Post">
 	
