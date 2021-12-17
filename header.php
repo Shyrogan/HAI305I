@@ -3,7 +3,6 @@ include "config/db.php";
 include "config/requete.php";
 
 $title = isset($title) ? $title : "";
-if(isset($_SESSION['mail'])) echo "Debug : Session = ".$_SESSION['mail'];
 $son =  isset($_SESSION['mail']) && $_SESSION['mail'] != "" ? "mon_espace.php" : "";
 //$connexionInscription = checkmail($_SESSION['email']) ? "login" : "Inscription";
 ?>

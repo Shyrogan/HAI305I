@@ -1,7 +1,7 @@
 <?php
+$title = "Mon Espace";
 session_start();
 include "header.php";
-$titre = "Mon Espace";
 
 if (!isset($_SESSION["mail"]) || $_SESSION["mail"] == ""){
 	header('Location: index.php');
