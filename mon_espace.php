@@ -44,11 +44,39 @@ else {
 
     </ul>
 
-	<h2>Mes commandes:</h2>
-	
-    <p class="py-4">
-		<button onclick="location.href='/panier.php'" type="button">Mon panier</button>
+	<p class="py-4">
 		<button onclick="location.href='/deconnexion.php'" type="button">Déconnexion</button>
 	</p>
+
+	<h2>Mes commandes:</h2>
+	<?php
+	$email = $_SESSION['mail'];
+    $commandes = $db->query("SELECT * FROM Commandes WHERE emailclient = '".$email."' AND etat = 'commande'");
+	while($commande = $commandes->fetch()) {
+		echo '<h4>'.date('d-m-Y', strtotime($commande['dateCommande'])).'</h4>';
+		$lignes = $db->query("SELECT * FROM LignesCommandes WHERE idCommande = ".$commande['idCommande']);
+		echo '<div class="page-container container pb-4">';
+		while ($ligne = $lignes->fetch()) {
+			$produit = $db->query("SELECT * FROM Produits WHERE idProduit = ".$ligne['idProduit'])
+				->fetch();
+			echo '<div class="row">';
+			echo '<div class="col">';
+			echo '<img src="'.$produit['photo'].'" class="imgproduits">';
+			echo '</div>';
+			echo '<div class="col-6">';
+			echo '<p>'.$produit['nom'].'</p>';
+			echo '<p>'.$produit['descriptif'].'</p>';
+			echo '</div>';
+			echo '<div class="col">';
+			echo '<p>Prix unitaire: '.$produit['prix'].'€</p>';
+			echo '<p>Quantité: '.$ligne['quantite'].'</p>';
+			echo '<p>Total: '.$produit['prix']*$ligne['quantite'].'€</p>';
+			echo '</div>';
+			echo '</div>';
+		}
+		echo '</div>';
+	}
+	?>
+
     <?php include "footer.php" ?>
 </div>
