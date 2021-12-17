@@ -13,6 +13,16 @@ if ((!isset($_SESSION["mail"]) || $_SESSION["mail"] == "") || (!isset($_GET["idP
     $resultatCommande = $db -> query("SELECT (idCommande) FROM Commandes WHERE emailclient = '".$email."' AND etat = 'panier'")
         -> fetch();
     $idCommande = $resultatCommande['idCommande'];
+    if(!isset($idCommande) || count($idCommande) == 0) {
+        // Au cas où
+        $sql = "INSERT INTO Commandes(dateCommande, emailclient, etat) VALUES(?,?,?)";
+		$query = $db->prepare($sql);
+		$query->execute([date("Y-m-d H:i:s"), $email, 'panier']);
+    }
+    $resultatCommande = $db -> query("SELECT (idCommande) FROM Commandes WHERE emailclient = '".$email."' AND etat = 'panier'")
+        -> fetch();
+    $idCommande = $resultatCommande['idCommande'];
+
     $lignes = $db->query("SELECT * FROM LignesCommandes WHERE idProduit = ".$idProduit." AND idCommande = ".$idCommande)
         -> fetch();
     

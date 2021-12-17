@@ -46,10 +46,15 @@ else {
 
     </ul>
 
+<<<<<<< HEAD
 	
 	
 
 
+=======
+	<h2>Mes commandes:</h2>
+	
+>>>>>>> 19faa614876c694911c165c0f4a72edf1896e5f8
     <p class="py-4">
 		<button onclick="location.href='/panier.php'" type="button">Mon panier</button>
 		<button onclick="location.href='/deconnexion.php'" type="button">Déconnexion</button>
