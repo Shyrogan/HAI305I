@@ -19,7 +19,9 @@ if ((!isset($_SESSION["mail"]) || $_SESSION["mail"] == "") || (!isset($_GET["idP
 		$query = $db->prepare($sql);
 		$query->execute([date("Y-m-d H:i:s"), $email, 'panier']);
     }
-    
+    $resultatCommande = $db -> query("SELECT (idCommande) FROM Commandes WHERE emailclient = '".$email."' AND etat = 'panier'")
+        -> fetch();
+    $idCommande = $resultatCommande['idCommande'];
 
     $lignes = $db->query("SELECT * FROM LignesCommandes WHERE idProduit = ".$idProduit." AND idCommande = ".$idCommande)
         -> fetch();
